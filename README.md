@@ -43,3 +43,5 @@ Kafka topic is base of everything. There is no topic, there is no kafka.Topic is
          Can be achieved for kafka using kafka streams API. 
 5. **Zookeeper**:   
 Zookeeper manage brokers. It helps in performing leader election for partitions. It sent notifications to kafka when changes happen.
+# Author 
+Akibur Rahman (Akib) - [akib22](https://github.com/akib22)
