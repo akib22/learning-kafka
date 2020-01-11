@@ -41,3 +41,5 @@ Kafka topic is base of everything. There is no topic, there is no kafka.Topic is
          Offset are stored after the message is processed.If process goes wrong, the message will be read again. Because it not set to the __consumer_offset as read. There will be a same message process twice. And duplicate process won't impact on our system.
          - Exactly once:  
          Can be achieved for kafka using kafka streams API. 
+5. **Zookeeper**:   
+Zookeeper manage brokers. It helps in performing leader election for partitions. It sent notifications to kafka when changes happen.
