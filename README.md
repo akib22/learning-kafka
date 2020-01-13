@@ -17,7 +17,7 @@ Kafka topic is base of everything. There is no topic, there is no kafka.Topic is
 
       Replication factor create broker for tracking data. It makes copy of data in multiple broker. If one of our broker goes down, other brokers will send data. When copy the data in broker, first broker became a leader and others brokers became In-Sync-Replica(ISR).
 2. **Kafka broker**:    
- Previous section we learn about kafka topic. Now question is where topic store? Topics are store in broker. Simply Brokers are server. In kafka, there will have many brokers. Each broker are identify by their ids. Like Broker 1, Broker 2, ...., Broker N. Collection of broker became a kafka cluster. Each broker contains certain topic partitions, Not hole topic. Because kafka is distributed.
+ Previous section we learn about kafka topic. Now question is where topic store? Topics are store in broker. Simply Brokers are server(bootstrap server). In kafka, there will have many brokers. Each broker are identify by their ids. Like Broker 1, Broker 2, ...., Broker N. Collection of broker become a kafka cluster. Each broker contains certain topic partitions, Not hole topic. Because kafka is distributed. And each broker knows about all brokers, topics and partitions. That's the reason when you connect to one broker, you are connect to the entire cluster.
   3. **Kafka producer API**:   
  Producer API permits an application to write or publish a stream of records or data to one or more Kafka topics. Producer automatically know to which broker and which partition to write to. You don't need to worry about that.
      - Producers acknowledgement/confirmation:  
