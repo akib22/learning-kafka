@@ -45,6 +45,6 @@ Kafka topic is base of everything. There is no topic, there is no kafka.Topic is
 Zookeeper manage brokers. It helps in performing leader election for partitions. It sent notifications to kafka when changes happen.
 
 ## Practice:
-*There is enough theory, ✋stop here. Now is time to apply what we already know😎😎. **[Let's get started with CLI](https://github.com/akib22/learning-kafka/blob/master/parctice.md)***
+*There is enough theory, ✋stop here. Now is time to apply what we already know😎😎. **[Let's get started with CLI](https://github.com/akib22/learning-kafka/blob/master/practice.md )***
 # Author 
 Akibur Rahman (Akib) - [akib22](https://github.com/akib22)
