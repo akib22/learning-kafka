@@ -31,11 +31,11 @@ Kafka topic is base of everything. There is no topic, there is no kafka.Topic is
      Producer can also send a message with a message key. A message key can be anything like number, string etc. If key is not sent key becomes null and message send as Round Robin style. Round Robin style means, If kafka cluster have 2 brokers. First message will go to first broker, second message will go to second broker. Then next message will go to first and next message second broker. And continuously will happen the same process. If key sent, then all message for that key will go to the same partition of a topic. Not like round robin. Say, we have a message with key of MSG_KEY. If MSG_KEY go to partition-3 it will always go to partition-3.
 4. **Kafka consumer API**:
   Consumer API subscribe to one or more topics and process or read the stream of records produced to them in an application. records are read in order within each partitions like 0, 1, 2 ..., n in order.
-       - Consumer group:  
+      - Consumer group:  
        It is a list of consumer. Each consumer read data from unique partition. If there are more consumers than topic's partitions then other consumer will inactive.
-       - Consumer offset:
+      - Consumer offset:
        Kafka stores the offsets at which consumer group has been reading. The offsets store live in a kafka topic named __consumer_offsets. When a consumer in a group has processed data received from kafka, it should be store the offsets. Storing that offset help when a consumer goes down, it will be able to read data where he left off when the consumer is back.
-       - Delivery semantics:  
+      - Delivery semantics:  
         By delivery semantics consumer decide when should store offset in __consumer_offset. There are 3 delivery semantics.
          - At most once:  
          Offset are stored as soon as the message received. If process goes wrong, message will be lost. Because it set that we read this message __consumer_topic and kafka only read unread message.
